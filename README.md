@@ -45,7 +45,7 @@ Extensão recomendada: Live Server
 
 Navegador moderno (Chrome, Edge ou Firefox)
 
-### ⚙️ Como Rodar o Projeto
+## ⚙️ Como Rodar o Projeto
 🔧 Backend
 
 ```bash
