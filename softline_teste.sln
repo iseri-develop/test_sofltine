@@ -1,0 +1,29 @@
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.5.2.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "softline_teste_igor", "softline_teste_igor", "{1EF6A3A1-7AE7-4911-ABD1-61AB0086046E}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SoftlineApp", "softline_teste_igor\SoftlineApp\SoftlineApp.csproj", "{B01E6D69-1CE7-22C7-6BAF-6C6643A417E5}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{B01E6D69-1CE7-22C7-6BAF-6C6643A417E5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B01E6D69-1CE7-22C7-6BAF-6C6643A417E5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B01E6D69-1CE7-22C7-6BAF-6C6643A417E5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B01E6D69-1CE7-22C7-6BAF-6C6643A417E5}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{B01E6D69-1CE7-22C7-6BAF-6C6643A417E5} = {1EF6A3A1-7AE7-4911-ABD1-61AB0086046E}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {2FE5F42B-C23F-4175-908E-003BDCC6863E}
+	EndGlobalSection
+EndGlobal

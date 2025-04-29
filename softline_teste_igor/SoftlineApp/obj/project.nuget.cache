@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "+uU2oddPC50=",
+  "dgSpecHash": "yg0qw1aWvZc=",
   "success": true,
-  "projectFilePath": "D:\\Workspace\\Web\\softline_teste\\SoftlineApp\\SoftlineApp.csproj",
+  "projectFilePath": "D:\\Workspace\\Web\\softline_teste\\softline_teste_igor\\SoftlineApp\\SoftlineApp.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\igor_\\.nuget\\packages\\azure.core\\1.38.0\\azure.core.1.38.0.nupkg.sha512",
     "C:\\Users\\igor_\\.nuget\\packages\\azure.identity\\1.11.4\\azure.identity.1.11.4.nupkg.sha512",

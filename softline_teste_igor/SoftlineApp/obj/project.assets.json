@@ -5197,11 +5197,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\Workspace\\web\\softline_teste\\SoftlineApp\\SoftlineApp.csproj",
+      "projectUniqueName": "D:\\Workspace\\Web\\softline_teste\\softline_teste_igor\\SoftlineApp\\SoftlineApp.csproj",
       "projectName": "SoftlineApp",
-      "projectPath": "D:\\Workspace\\web\\softline_teste\\SoftlineApp\\SoftlineApp.csproj",
+      "projectPath": "D:\\Workspace\\Web\\softline_teste\\softline_teste_igor\\SoftlineApp\\SoftlineApp.csproj",
       "packagesPath": "C:\\Users\\igor_\\.nuget\\packages\\",
-      "outputPath": "D:\\Workspace\\web\\softline_teste\\SoftlineApp\\obj\\",
+      "outputPath": "D:\\Workspace\\Web\\softline_teste\\softline_teste_igor\\SoftlineApp\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\igor_\\AppData\\Roaming\\NuGet\\NuGet.Config"
