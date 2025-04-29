@@ -50,5 +50,6 @@ Para gerar o script do banco:
 dotnet ef migrations script -o softline_database.sql
 Isso gera um arquivo .sql com o script de criação do banco.
 ```
-👤 Desenvolvedor
+## 👤 Desenvolvedor
+
 Igor Iseri
