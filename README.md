@@ -35,14 +35,14 @@ dotnet run
 A API estará disponível em algo como: http://localhost:5204
 ```
 
-###2. Frontend
+### 2. Frontend
 Abrir o diretório frontend
 
 Abrir index.html usando Live Server no VS Code ou outro servidor local
 
 Acessar pelo navegador (ex: http://127.0.0.1:5500/frontend/index.html)
 
-###3. Banco de Dados
+### 3. Banco de Dados
 Para gerar o script do banco:
 
 ```bash
