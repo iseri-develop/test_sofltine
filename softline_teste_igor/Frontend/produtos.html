@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <title>Produtos - Softline</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Gerenciar Produtos</h1>
+
+        <form id="produtoForm">
+            <input type="hidden" id="id" />
+            
+            <label>Descrição:</label>
+            <input type="text" id="descricao" required />
+
+            <label>Código de Barras:</label>
+            <input type="text" id="codigo" required />
+
+            <label>Valor de Venda:</label>
+            <input type="number" id="valor" step="0.01" required />
+
+            <label>Peso Bruto:</label>
+            <input type="number" id="pesoBruto" step="0.01" />
+
+            <label>Peso Líquido:</label>
+            <input type="number" id="pesoLiquido" step="0.01" />
+
+            <button type="submit">Salvar</button>
+        </form>
+
+        <h2>Produtos Cadastrados</h2>
+        <table border="1">
+            <thead>
+                <tr>
+                    <th>Descrição</th>
+                    <th>Código</th>
+                    <th>Valor</th>
+                    <th>Peso Bruto</th>
+                    <th>Peso Líquido</th>
+                    <th>Ações</th>
+                </tr>
+            </thead>
+            <tbody id="produtosTableBody"></tbody>
+        </table>
+
+        <p><a href="dashboard.html">← Voltar ao Dashboard</a></p>
+    </div>
+
+    <script type="module" src="js/produtos.js"></script>
+</body>
+</html>

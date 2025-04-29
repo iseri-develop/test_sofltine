@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <title>Dashboard - Softline</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Bem-vindo(a), <span id="user"></span>!</h1>
+
+        <nav>
+            <ul>
+                <li><a href="clientes.html">Gerenciar Clientes</a></li>
+                <li><a href="produtos.html">Gerenciar Produtos</a></li>
+                <li><a href="#" id="logout">Sair</a></li>
+            </ul>
+        </nav>
+    </div>
+
+    <script>
+        // Valida se o usuário está logado
+        const user = sessionStorage.getItem("usuarioLogado");
+
+        if (!user) {
+            window.location.href = "index.html";
+        } else {
+            document.getElementById("user").innerText = user;
+        }
+
+        // Logout
+        document.getElementById("logout").addEventListener("click", () => {
+            sessionStorage.clear();
+            window.location.href = "index.html";
+        });
+    </script>
+</body>
+</html>

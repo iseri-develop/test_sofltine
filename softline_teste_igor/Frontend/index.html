@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8" />
+    <title>Login - Softline</title>
+    <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+    <div class="container">
+        <h1>Login</h1>
+        <form id="loginForm">
+            <label for="login">Usuário</label>
+            <input type="text" id="login" name="login" required />
+
+            <label for="senha">Senha</label>
+            <input type="password" id="senha" name="senha" required />
+
+            <button type="submit">Entrar</button>
+        </form>
+        <p id="error" style="color:red; display:none;">Login ou senha inválidos.</p>
+    </div>
+
+    <script type="module" src="js/login.js"></script>
+</body>
+</html>
