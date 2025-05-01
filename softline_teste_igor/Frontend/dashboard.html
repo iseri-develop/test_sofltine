@@ -4,28 +4,48 @@
     <meta charset="UTF-8">
     <title>Dashboard - Softline</title>
     <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/dashboard.css">
+    <script src="https://unpkg.com/lucide@latest"></script>
 </head>
 <body>
-    <div class="container">
-        <h1>Bem-vindo(a), <span id="user"></span>!</h1>
+    <div class="navbar">
+        <div class="nav-left">
+            <a href="dashboard.html">
+                <i data-lucide="layout-dashboard"></i>
+                Dashboard
+            </a>
+            <a href="clientes.html">
+                <i data-lucide="users"></i>
+                Clientes
+            </a>
+            <a href="produtos.html">
+                <i data-lucide="package"></i>
+                Produtos
+            </a>
+        </div>
+        <div class="nav-right">
+            <a href="#" id="logout">
+                <i data-lucide="log-out"></i>
+                Sair
+            </a>
+        </div>
+    </div>
 
-        <nav>
-            <ul>
-                <li><a href="clientes.html">Gerenciar Clientes</a></li>
-                <li><a href="produtos.html">Gerenciar Produtos</a></li>
-                <li><a href="#" id="logout">Sair</a></li>
-            </ul>
-        </nav>
+    <div class="content">
+        <h1>Bem-vindo, <span id="usuarioNome"></span>!</h1>
+        <p>Use a navegação acima para acessar os módulos.</p>
     </div>
 
     <script>
+        lucide.createIcons();
+
         // Valida se o usuário está logado
         const user = sessionStorage.getItem("usuarioLogado");
 
         if (!user) {
             window.location.href = "index.html";
         } else {
-            document.getElementById("user").innerText = user;
+            document.getElementById("usuarioNome").innerText = user;
         }
 
         // Logout

@@ -4,11 +4,42 @@ if (!user) {
     window.location.href = "index.html";
 }
 
+// Renderiza ícones Lucide
+lucide.createIcons();
+
+// URL base da API
 const API_URL = "http://localhost:5204/api/produto";
 
+// Torna a função logout acessível no HTML
+document.getElementById("logout").addEventListener("click", () => {
+    sessionStorage.clear();
+    window.location.href = "index.html";
+});
+
+// Evento para abrir o modal
+const btnAddProduto = document.getElementById("btnAddProduto");
+if (btnAddProduto) {
+    btnAddProduto.addEventListener("click", () => {
+        document.getElementById("produtoModal").classList.remove("hidden");
+        document.getElementById("produtoForm").reset();
+        document.getElementById("modalTitle").innerText = "Novo Produto";
+        document.getElementById("id").value = "";
+    });
+}
+
+// Evento para fechar modal
+const closeModal = document.getElementById("closeModal");
+if (closeModal) {
+    closeModal.addEventListener("click", () => {
+        document.getElementById("clienteModal").classList.add("hideen");
+    });
+}
+
+// Ao carregar a página
 document.addEventListener("DOMContentLoaded", () => {
     carregarProdutos();
 
+    // Evento de envio do formulário
     document.getElementById("produtoForm").addEventListener("submit", async (e) => {
         e.preventDefault();
 
@@ -35,6 +66,7 @@ document.addEventListener("DOMContentLoaded", () => {
             alert("Produto salvo com sucesso!");
             document.getElementById("produtoForm").reset();
             document.getElementById("id").value = "";
+            document.getElementById("produtoModal").classList.add("hidden");
             carregarProdutos();
         } else {
             alert("Erro ao salvar produto.");
@@ -42,6 +74,7 @@ document.addEventListener("DOMContentLoaded", () => {
     });
 });
 
+// Carrega tabela de produtos
 async function carregarProdutos() {
     const tbody = document.getElementById("produtosTableBody");
     tbody.innerHTML = "";
@@ -58,12 +91,14 @@ async function carregarProdutos() {
             <td>${p.pesoBruto.toFixed(2)}</td>
             <td>${p.pesoLiquido.toFixed(2)}</td>
             <td>
-                <button onclick="editarProduto(${p.id})">Editar</button>
-                <button onclick="deletarProduto(${p.id})">Excluir</button>
+                <button title="Editar" onclick="editarProduto(${p.id})"><i data-lucide='edit'></i></button>
+                <button title="Excluir" onclick="deletarProduto(${p.id})"><i data-lucide='trash-2'></i></button>
             </td>
         `;
         tbody.appendChild(tr);
     });
+
+    lucide.createIcons(); // atualiza ícones após renderizar
 }
 
 window.editarProduto = async function (id) {
@@ -76,6 +111,9 @@ window.editarProduto = async function (id) {
     document.getElementById("valor").value = p.valorVenda;
     document.getElementById("pesoBruto").value = p.pesoBruto;
     document.getElementById("pesoLiquido").value = p.pesoLiquido;
+
+    document.getElementById("modalTitle").innerText = "Editar produto";
+    document.getElementById("produtoModal").classList.remove("hidden");
 };
 
 window.deletarProduto = async function (id) {

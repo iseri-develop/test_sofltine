@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("SoftlineApp")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+942c67c648e64483e06ec1a78e4a32998c779861")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+710490a0cbd451aaa8bc663afd4015a74419f797")]
 [assembly: System.Reflection.AssemblyProductAttribute("SoftlineApp")]
 [assembly: System.Reflection.AssemblyTitleAttribute("SoftlineApp")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

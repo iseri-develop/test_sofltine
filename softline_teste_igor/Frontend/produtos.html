@@ -4,50 +4,75 @@
     <meta charset="UTF-8">
     <title>Produtos - Softline</title>
     <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/dashboard.css">
+    <link rel="stylesheet" href="css/clientes.css">
+    <link rel="stylesheet" href="css/produtos.css">
+    <script src="https://unpkg.com/lucide@latest"></script>
 </head>
 <body>
-    <div class="container">
-        <h1>Gerenciar Produtos</h1>
-
-        <form id="produtoForm">
-            <input type="hidden" id="id" />
-            
-            <label>Descrição:</label>
-            <input type="text" id="descricao" required />
-
-            <label>Código de Barras:</label>
-            <input type="text" id="codigo" required />
-
-            <label>Valor de Venda:</label>
-            <input type="number" id="valor" step="0.01" required />
-
-            <label>Peso Bruto:</label>
-            <input type="number" id="pesoBruto" step="0.01" />
-
-            <label>Peso Líquido:</label>
-            <input type="number" id="pesoLiquido" step="0.01" />
-
-            <button type="submit">Salvar</button>
-        </form>
-
-        <h2>Produtos Cadastrados</h2>
-        <table border="1">
-            <thead>
-                <tr>
-                    <th>Descrição</th>
-                    <th>Código</th>
-                    <th>Valor</th>
-                    <th>Peso Bruto</th>
-                    <th>Peso Líquido</th>
-                    <th>Ações</th>
-                </tr>
-            </thead>
-            <tbody id="produtosTableBody"></tbody>
-        </table>
-
-        <p><a href="dashboard.html">← Voltar ao Dashboard</a></p>
+    <!-- Navbar herdada do dashboard -->
+    <div class="navbar">
+        <div class="nav-left">
+            <a href="dashboard.html"><i data-lucide="layout-dashboard"></i> Dashboard</a>
+            <a href="clientes.html"><i data-lucide="users"></i> Clientes</a>
+            <a href="produtos.html"><i data-lucide="package"></i> Produtos</a>
+        </div>
+        <div class="nav-right">
+            <a href="#" id="logout"><i data-lucide="log-out"></i> Sair</a>
+        </div>
     </div>
 
+    <div class="container">
+        <h1>Produtos</h1>
+
+        <!-- Botão adicionar produto -->
+         <button id="btnAddProduto" title="Adicionar produto">
+            <i data-lucide="plus"></i> Adicionar Produto
+         </button>
+
+         <!-- Tabela de listagem -->
+         <table>
+             <thead>
+                 <tr>
+                     <th>Descrição</th>
+                     <th>Código</th>
+                     <th>Valor</th>
+                     <th>Peso Bruto</th>
+                     <th>Peso Líquido</th>
+                     <th>Ações</th>
+                 </tr>
+             </thead>
+             <tbody id="produtosTableBody"></tbody>
+         </table>
+    </div>
+
+    <div id="produtoModal" class="modal hidden">
+        <div class="modal-content">
+            <span class="close" id="closeModal">&times;</span>
+            <h2 id="modalTitle">Novo Cliente</h2>
+            <form id="produtoForm">
+                <input type="hidden" id="id" />
+                
+                <label>Descrição:</label>
+                <input type="text" id="descricao" required />
+
+                <label>Código de Barras:</label>
+                <input type="text" id="codigo" required />
+
+                <label>Valor de Venda:</label>
+                <input type="number" id="valor" step="0.01" required />
+
+                <label>Peso Bruto:</label>
+                <input type="number" id="pesoBruto" step="0.01" />
+
+                <label>Peso Líquido:</label>
+                <input type="number" id="pesoLiquido" step="0.01" />
+
+                <button type="submit">Salvar</button>
+            </form>
+        </div>
+    </div>
+    
     <script type="module" src="js/produtos.js"></script>
 </body>
 </html>
