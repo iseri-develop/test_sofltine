@@ -19,7 +19,7 @@ namespace SoftlineApp.Controllers
         public async Task<IActionResult> Create([FromBody] UsuarioDTO dto)
         {
             if (!ModelState.IsValid)
-                return BadRequest(ModelState);
+                return BadRequest(ModelState); // Retorna error 400
 
             await _service.CadastrarAsync(dto);
             return Created("", dto);
