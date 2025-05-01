@@ -1,3 +1,9 @@
+// Proteção contra acesso direto
+const user = sessionStorage.getItem("usuarioLogado");
+if (!user) {
+    window.location.href = "index.html";
+}
+
 const API_URL = "http://localhost:5204/api/cliente";
 
 document.addEventListener("DOMContentLoaded", () => {
